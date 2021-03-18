@@ -1,0 +1,25 @@
+{
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "dcc-react-example",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+    }
+  },
+  "projects": {
+    "webapp": { "tags": [] },
+    "webapp-e2e": { "tags": [], "implicitDependencies": ["webapp"] },
+    "mobileapp": { "tags": [] },
+    "api": { "tags": [] },
+    "ui-lib": { "tags": [] }
+  }
+}
